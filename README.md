@@ -3,11 +3,11 @@ for building android-se-access(https://github.com/nelenkov/android-se-access)
 
 if you build the android-se-access project with the latest version of javaemvreader, you may get theerror messages like 
 	"Error:(4, 16) java: cannot find symbol
-	symbol: class ApplicationDefinitionFile
+	: class ApplicationDefinitionFile
 	location: package sasc.emv"
 	"Error:(8, 16) java: cannot find symbol
-  symbol:   class EMVCard
-  location: package sasc.emv"
+  	:   class EMVCard
+  	location: package sasc.emv"
 
 I digged out amost all revisions of javaemvreader svn repository and found out 
 that the revision 9 has the fewest errors in binding to android-se-access.
@@ -39,6 +39,9 @@ I modified and added a few lines to the revision 9.
 > 	return this.type;
 >     }
 > 
+
+You can build javaemvreader to use maven.
+> sudo mvn package
 
 Copyright 2014 Yongkil Kwon
 
